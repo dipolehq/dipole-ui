@@ -1,0 +1,1 @@
+export { DifferentiatorTabs } from './DifferentiatorTabs';
