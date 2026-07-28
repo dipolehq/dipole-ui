@@ -1,1 +1,0 @@
-export { DifferentiatorTabs } from './DifferentiatorTabs';

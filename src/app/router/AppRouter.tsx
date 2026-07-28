@@ -1,19 +1,20 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { SiteShell } from '@app/SiteShell';
-import { NotFoundPage } from '@features/not-found';
-import { PricingPage } from '@features/pricing';
+import { ROUTES } from '@app/router/routes';
+import { LandingPage } from '@pages/LandingPage';
+import { NotFoundPage } from '@pages/NotFoundPage';
+import { PricingPage } from '@pages/PricingPage';
 
 /**
- * Minimal route tree. Home page + catch-all 404.
+ * Route tree. Paths come from `ROUTES` so they stay in sync with in-app links.
  */
 export function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<SiteShell />} />
-        <Route path="/pricing" element={<PricingPage />} />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path={ROUTES.home} element={<LandingPage />} />
+        <Route path={ROUTES.pricing} element={<PricingPage />} />
+        <Route path={ROUTES.notFound} element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );

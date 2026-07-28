@@ -39,7 +39,7 @@
     content: "";
     position: fixed;
     inset: 0;
-    background-image: url('../assets/overly-image.svg');
+    background-image: url('../assets/images/overly-image.svg');
     background-repeat: repeat;
     mix-blend-mode: overlay;
     opacity: 1;

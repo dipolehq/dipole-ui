@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+
+import { ROUTES } from '@app/router/routes';
 import { Brand } from '@components/ui/Brand';
 
 const USE_CASES = [
@@ -102,7 +104,7 @@ export function Navbar() {
         <a href="#" className="inline-flex items-center px-4 py-2 text-[0.9rem] font-normal tracking-[0.01em] text-white/50 no-underline rounded-lg transition-colors duration-200 hover:text-white">
           Docs
         </a>
-        <Link to="/pricing" className="inline-flex items-center px-4 py-2 text-[0.9rem] font-normal tracking-[0.01em] text-white/50 no-underline rounded-lg transition-colors duration-200 hover:text-white">
+        <Link to={ROUTES.pricing} className="inline-flex items-center px-4 py-2 text-[0.9rem] font-normal tracking-[0.01em] text-white/50 no-underline rounded-lg transition-colors duration-200 hover:text-white">
           Pricing
         </Link>
       </div>

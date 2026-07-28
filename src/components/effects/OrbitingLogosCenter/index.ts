@@ -1,1 +1,0 @@
-export { OrbitingLogosCenter } from './OrbitingLogosCenter';

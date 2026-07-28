@@ -1,1 +1,1 @@
-export { Brand } from '@components/ui/Brand/Brand';
+export { Brand } from './Brand';

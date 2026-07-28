@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import logoUrl from '@assets/dipole_logo.svg';
+import logoUrl from '@assets/brand/dipole_logo.svg';
 
 interface BrandProps {
   /** Accessible label + wordmark text. */
