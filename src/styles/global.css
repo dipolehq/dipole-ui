@@ -80,3 +80,18 @@
   from, to { opacity: 1; }
   50% { opacity: 0; }
 }
+
+/* Drives the GradientBars effect. Each bar sets its own --initial-scale, so one
+   shared keyframe can pulse every bar relative to its own resting height. */
+@keyframes gradientBarPulse {
+  from { transform: scaleY(var(--initial-scale)); }
+  to { transform: scaleY(calc(var(--initial-scale) * 0.7)); }
+}
+
+/* Decorative motion only — hold the bars at their resting height instead. */
+@media (prefers-reduced-motion: reduce) {
+  .gradient-bar {
+    animation: none !important;
+  }
+}
+

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { FlickeringGrid } from '@components/effects/FlickeringGrid';
 import { OrbitingLogos } from '@components/effects/OrbitingLogos';
 
 import { SPEEDUP_FEATURES, SPEEDUP_TABS, type SpeedupTab } from './content';
@@ -13,6 +14,12 @@ export function Speedup() {
 
   return (
     <section className="relative w-full min-h-[calc(100vh-4rem)] py-16 bg-[#0b0d0e] overflow-hidden -mt-px">
+      {/* Flickering grid backdrop — first child so it paints behind the
+          orbiting logos and the content. */}
+      <div className="absolute inset-0">
+        <FlickeringGrid theme="onDark" />
+      </div>
+
       {/* Orbiting logos — absolutely positioned to section's top-right corner */}
       <div className="absolute top-0 right-0 w-[55%] h-full pointer-events-none">
         <OrbitingLogos />

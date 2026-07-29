@@ -1,33 +1,25 @@
-import meshImg from '@assets/images/mesh.jpg';
 import problemImg from '@assets/images/problem.png';
-
-const MESH_MASK =
-  'radial-gradient(ellipse 70% 60% at 60% 40%, black 0%, rgba(0,0,0,0.4) 50%, transparent 80%)';
+import { FlickeringGrid } from '@components/effects/FlickeringGrid';
 
 /**
  * Problem statement section — contrasts solved human identity against
- * unmanaged machine identity, over a fading mesh backdrop.
+ * unmanaged machine identity.
  */
 export function Problem() {
   return (
     <section className="relative w-full py-16 bg-[#0b0d0e] overflow-hidden">
-      {/* Mesh background image — fading on the right */}
-      <img
-        className="absolute top18 -right-40 w-[85%] h-auto pointer-events-none select-none opacity-60"
-        style={{ maskImage: MESH_MASK, WebkitMaskImage: MESH_MASK }}
-        src={meshImg}
-        alt=""
-        aria-hidden="true"
-        draggable={false}
-      />
+      {/* Flickering grid backdrop — sits behind the content. */}
+      <div className="absolute inset-0 z-0">
+        <FlickeringGrid theme="onDark" />
+      </div>
 
-      <div className="relative w-full px-[2.5%]">
+      <div className="relative z-10 w-full px-[2.5%]">
         {/* Heading + text on the left */}
         <h2 className="m-0 mb-6 text-[clamp(2rem,4vw,3.25rem)] font-light leading-[1.2] text-white tracking-[-0.02em]">
           Identity for Humans Exists. Identity for Machines Doesn't.
         </h2>
 
-        <div className="max-w-[520px] mb-16">
+        <div className="w-2/3 mb-16">
           <p className="m-0 mb-4 text-[0.92rem] font-light leading-[1.75] text-white/55 text-left">
             The left side is a solved problem. Every employee login is verified, enforced by policy, and recorded for audit.
           </p>
@@ -42,8 +34,10 @@ export function Problem() {
           </p>
         </div>
 
-        {/* Problem image */}
-        <div className="mt-42">
+        {/* Problem image. The gap here was sized to clear the mesh render that
+            used to sit on the right; without it the diagram sits closer to the
+            copy. */}
+        <div className="mt-8">
           <img
             className="block w-[93%] h-auto mx-auto pointer-events-none select-none"
             src={problemImg}

@@ -1,19 +1,20 @@
-import heroSectionImg from '@assets/images/hero_section_dotted.png';
+import { GradientBars } from '@components/effects/GradientBars';
 
 /**
- * Hero section — full-width image that fills the viewport below the navbar
- * without requiring any scroll.
+ * Hero section — fills the viewport below the navbar with the gradient bars
+ * backdrop. No foreground content yet.
  */
 export function Hero() {
   return (
-    <div className="relative w-full h-[calc(100vh-4rem)] overflow-hidden">
-      <img
-        className="w-full h-full object-cover block pointer-events-none select-none"
-        style={{ objectPosition: 'center 47%' }}
-        src={heroSectionImg}
-        alt="Dipole — Manage Identity, Not Static Credentials"
-        draggable={false}
-      />
+    <div className="relative w-full h-[calc(100vh-4rem)] bg-[#0b0d0e] overflow-hidden">
+      <div className="absolute inset-0">
+        <GradientBars
+          theme="onDark"
+          numBars={7}
+          gradientFrom="#ABABAB"
+          animationDuration={3}
+        />
+      </div>
     </div>
   );
 }

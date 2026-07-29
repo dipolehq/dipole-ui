@@ -1,14 +1,7 @@
-import wormholeImg from '@assets/images/wormhole.png';
+import { FlickeringGrid } from '@components/effects/FlickeringGrid';
 import { ValueCard } from '@components/ui/ValueCard';
 
 import { EXECUTION_EDGE, TECHNICAL_EDGE, type ValuePropositionCard } from './content';
-
-/**
- * Layered mask that fades the wormhole backdrop out on every edge so it blends
- * into the section background instead of ending abruptly.
- */
-const WORMHOLE_MASK =
-  '[mask-image:linear-gradient(to_right,transparent_0%,rgba(0,0,0,0.2)_15%,rgba(0,0,0,0.7)_35%,black_55%),linear-gradient(to_bottom,black_0%,black_50%,rgba(0,0,0,0.2)_80%,transparent_100%),linear-gradient(to_left,black_0%,black_85%,rgba(0,0,0,0.2)_95%,transparent_100%),linear-gradient(to_top,black_0%,black_85%,rgba(0,0,0,0.2)_95%,transparent_100%)] [mask-composite:intersect] [-webkit-mask-image:linear-gradient(to_right,transparent_0%,rgba(0,0,0,0.2)_15%,rgba(0,0,0,0.7)_35%,black_55%),linear-gradient(to_bottom,black_0%,black_50%,rgba(0,0,0,0.2)_80%,transparent_100%),linear-gradient(to_left,black_0%,black_85%,rgba(0,0,0,0.2)_95%,transparent_100%),linear-gradient(to_top,black_0%,black_85%,rgba(0,0,0,0.2)_95%,transparent_100%)] [-webkit-mask-composite:source-in]';
 
 const CARD_GROUPS: { label: string; cards: ValuePropositionCard[]; className: string }[] = [
   { label: 'Execution Edge', cards: EXECUTION_EDGE, className: 'px-[2.5%]' },
@@ -17,21 +10,17 @@ const CARD_GROUPS: { label: string; cards: ValuePropositionCard[]; className: st
 
 /**
  * Value proposition section — positioning statement followed by the execution
- * and technical edge card grids, over a masked wormhole backdrop.
+ * and technical edge card grids.
  */
 export function ValueProposition() {
   return (
     <section className="relative w-full py-12 pb-20 bg-[#0b0d0e] overflow-hidden">
-      {/* Wormhole background image */}
-      <img
-        className={`absolute -top-[5%] -right-[5%] w-[65%] h-auto pointer-events-none select-none opacity-85 ${WORMHOLE_MASK}`}
-        src={wormholeImg}
-        alt=""
-        aria-hidden="true"
-        draggable={false}
-      />
+      {/* Flickering grid backdrop — sits behind the content. */}
+      <div className="absolute inset-0 z-0">
+        <FlickeringGrid theme="onDark" />
+      </div>
 
-      <div className="relative w-full max-w-full mx-auto">
+      <div className="relative z-10 w-full max-w-full mx-auto">
         <h2 className="m-0 mb-10 px-[2.5%] text-[clamp(2rem,4vw,3.25rem)] font-light leading-[1.2] text-white tracking-[-0.02em]">
           Dipole's Value Proposition
         </h2>
@@ -44,8 +33,9 @@ export function ValueProposition() {
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="pt-48">
+        {/* Cards. The gap here was sized to clear the wormhole render above; it
+            now only needs to separate the cards from the intro copy. */}
+        <div className="pt-16">
           {CARD_GROUPS.map((group) => (
             <div key={group.label} className={group.className}>
               <h3 className="m-0 mb-5 text-[0.78rem] font-medium tracking-[0.12em] uppercase text-white/40">
