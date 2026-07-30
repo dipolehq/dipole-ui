@@ -16,7 +16,7 @@ export function Differentiators() {
       </div>
 
       <div className="relative z-10 w-full h-full max-w-full mx-auto px-[2.5%] flex flex-col">
-        <h2 className="m-0 mb-12 text-[clamp(2rem,4vw,3.25rem)] font-light leading-[1.2] text-[#0b0d0e] tracking-[-0.02em]">
+        <h2 className="m-0 mb-12 text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-[1.2] text-[#0b0d0e] tracking-[-0.02em]">
           What Makes Dipole Different.
         </h2>
         <div className="flex-1 min-h-0">

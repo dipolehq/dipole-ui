@@ -1,20 +1,28 @@
-import { GradientBars } from '@components/effects/GradientBars';
+import heroImg from '@assets/images/hero.png';
 
 /**
- * Hero section — fills the viewport below the navbar with the gradient bars
- * backdrop. No foreground content yet.
+ * Hero section — heading and subheading above, hero image pinned to the bottom.
  */
 export function Hero() {
   return (
-    <div className="relative w-full h-[calc(100vh-4rem)] bg-[#0b0d0e] overflow-hidden">
-      <div className="absolute inset-0">
-        <GradientBars
-          theme="onDark"
-          numBars={7}
-          gradientFrom="#ABABAB"
-          animationDuration={3}
-        />
+    <section className="relative w-full h-[calc(100vh-4rem)] bg-white overflow-hidden flex flex-col">
+      {/* Heading area */}
+      <div className="flex-1 flex flex-col items-center justify-center pt-16 px-[2.5%]">
+        <h1 className="m-0 text-[clamp(2.5rem,5.5vw,4.5rem)] font-light leading-[1.1] tracking-[-0.03em] text-[#0b0d0e] text-center">
+          Manage Identities, Not Credentials
+        </h1>
+        <p className="m-0 mt-5 text-[1.05rem] font-light leading-[1.6] text-[#0b0d0e]/55 text-center">
+          Dipole is a centralized and secretless identity & access management for agents and workloads.
+        </p>
       </div>
-    </div>
+
+      {/* Hero image pinned to the bottom */}
+      <img
+        src={heroImg}
+        alt=""
+        draggable={false}
+        className="w-full h-auto pointer-events-none select-none"
+      />
+    </section>
   );
 }

@@ -21,7 +21,7 @@ export function ValueProposition() {
       </div>
 
       <div className="relative z-10 w-full max-w-full mx-auto">
-        <h2 className="m-0 mb-10 px-[2.5%] text-[clamp(2rem,4vw,3.25rem)] font-light leading-[1.2] text-white tracking-[-0.02em]">
+        <h2 className="m-0 mb-10 px-[2.5%] text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-[1.2] text-white tracking-[-0.02em]">
           Dipole's Value Proposition
         </h2>
         <div className="pl-[2.5%]">

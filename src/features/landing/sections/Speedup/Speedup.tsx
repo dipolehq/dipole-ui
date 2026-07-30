@@ -27,7 +27,7 @@ export function Speedup() {
 
       {/* Content */}
       <div className="relative w-full max-w-full mx-auto px-[2.5%]">
-        <h2 className="m-0 mb-12 text-[clamp(2rem,4vw,3.25rem)] font-light leading-[1.2] text-white tracking-[-0.02em]">
+        <h2 className="m-0 mb-12 text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-[1.2] text-white tracking-[-0.02em]">
           Speedup AI Adoption With Dipole
         </h2>
 
