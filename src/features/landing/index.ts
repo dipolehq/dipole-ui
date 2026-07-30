@@ -4,3 +4,4 @@ export { ManagementConsole } from './sections/ManagementConsole';
 export { ValueProposition } from './sections/ValueProposition';
 export { Differentiators } from './sections/Differentiators';
 export { Speedup } from './sections/Speedup';
+export { InAction } from './sections/InAction';

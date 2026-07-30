@@ -41,7 +41,10 @@ export function ValueProposition() {
               <h3 className="m-0 mb-5 text-[0.78rem] font-medium tracking-[0.12em] uppercase text-white/40">
                 {group.label}
               </h3>
-              <div className="grid grid-cols-3 gap-5 grid-rows-[320px]">
+              {/* Fixed row height so every card across both groups is identical.
+                  Sized to fit the longest card's copy snugly — was 320px, which
+                  left dead space under the shorter cards. */}
+              <div className="grid grid-cols-3 gap-5 grid-rows-[300px]">
                 {group.cards.map((card) => (
                   <ValueCard
                     key={card.title}

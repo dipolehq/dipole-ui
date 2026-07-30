@@ -18,9 +18,8 @@ export interface DifferentiatorContent {
   description: string;
   /** Closing line, rendered with more emphasis than the description. */
   highlight?: string;
+  /** Diagram, scaled to fit the section's fixed image frame. */
   image?: string;
-  /** Per-image Tailwind transform used to fine-tune scale and offset. */
-  imageScale?: string;
 }
 
 export const DIFFERENTIATORS: Record<DifferentiatorTab, DifferentiatorContent> = {
@@ -31,7 +30,6 @@ export const DIFFERENTIATORS: Record<DifferentiatorTab, DifferentiatorContent> =
     highlight:
       'A single control surface replaces hundreds of scattered credentials managed by dozens of teams who forgot they created them.',
     image: managementConsoleImg,
-    imageScale: 'scale-100 -translate-x-8',
   },
   'MCP Gateway': {
     title: 'AI Agents Get Their Own Security Boundary',
@@ -40,7 +38,6 @@ export const DIFFERENTIATORS: Record<DifferentiatorTab, DifferentiatorContent> =
     highlight:
       'Revoke one user, one agent, or one tool independently. No shared credentials, no cross-contamination.',
     image: mcpAuthdanceImg,
-    imageScale: 'scale-105',
   },
   'Zero Static Secrets': {
     title: 'Nothing to Leak Because Nothing Is Stored',

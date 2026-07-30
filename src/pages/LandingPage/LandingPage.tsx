@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
 
 import { env } from '@config/env';
+import { Footer } from '@components/layout/Footer';
 import { Navbar } from '@components/layout/Navbar';
 import {
   Differentiators,
   Hero,
+  InAction,
   ManagementConsole,
   Problem,
   Speedup,
@@ -34,6 +36,8 @@ export function LandingPage() {
       <ValueProposition />
       <Differentiators />
       <Speedup />
+      <InAction />
+      <Footer />
     </>
   );
 }

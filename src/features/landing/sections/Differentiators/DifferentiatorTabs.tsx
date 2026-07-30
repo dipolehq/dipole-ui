@@ -50,13 +50,14 @@ export function DifferentiatorTabs() {
             </p>
           )}
         </div>
-        {/* Image area — always present with fixed size, shows image or empty */}
-        <div className="flex-1 min-w-0 h-full flex items-center justify-end">
+        {/* Fixed image frame. Every tab's diagram renders into this same box and
+            is scaled to fit it, so switching tabs never shifts the layout. */}
+        <div className="flex-1 min-w-0 h-full">
           {active.image ? (
             <img
               src={active.image}
               alt={active.title}
-              className={`block max-w-full max-h-full object-contain ${active.imageScale || ''}`}
+              className="block w-full h-full object-contain object-center pointer-events-none select-none"
               draggable={false}
             />
           ) : null}
