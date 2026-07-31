@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 
+import { ROUTES } from '@app/router/routes';
 import type { NavDropdownColumn } from '@components/ui/NavDropdown';
 
 /**
@@ -31,7 +32,7 @@ export const PRODUCT_COLUMNS: NavDropdownColumn[] = [
         title: 'IAM For Agents',
         description:
           'Secure what resources your Agents & MCP can access with 100% auditability',
-        href: '#',
+        href: ROUTES.iamForAgents,
         // AI agent: robot head with antenna.
         icon: icon(
           <>

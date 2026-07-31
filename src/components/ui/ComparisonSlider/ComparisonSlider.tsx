@@ -7,10 +7,13 @@ export interface ComparisonSliderProps {
   right: ReactNode;
   /** Initial divider position as a percentage (0–100). */
   initialPosition?: number;
-  /** Optional label shown above the left panel. */
-  leftLabel?: string;
-  /** Optional label shown above the right panel. */
-  rightLabel?: string;
+  /**
+   * Tab rendered flush against the frame's top-left edge. Passed as a node so
+   * the caller can style it to match its own panel.
+   */
+  leftLabel?: ReactNode;
+  /** Tab rendered flush against the frame's top-right edge. */
+  rightLabel?: ReactNode;
   className?: string;
 }
 
@@ -90,41 +93,36 @@ export function ComparisonSlider({
     }
   }, []);
 
+  const hasLabels = Boolean(leftLabel || rightLabel);
+
   return (
-    <div className={`flex flex-col gap-0 ${className}`.trim()}>
-      {/* Labels row */}
-      {(leftLabel || rightLabel) && (
-        <div className="flex justify-between mb-3">
-          {leftLabel && (
-            <span className="font-mono text-[0.68rem] font-medium tracking-[0.14em] uppercase text-white/40">
-              {leftLabel}
-            </span>
-          )}
-          {rightLabel && (
-            <span className="font-mono text-[0.68rem] font-medium tracking-[0.14em] uppercase text-white/40">
-              {rightLabel}
-            </span>
-          )}
+    <div className={`flex flex-col ${className}`.trim()}>
+      {/* Label tabs, sitting flush on the frame's top edge. No gap, and the
+          frame squares off its top corners so the tabs read as attached. */}
+      {hasLabels && (
+        <div className="flex items-end justify-between">
+          {leftLabel}
+          {rightLabel}
         </div>
       )}
 
       {/* Slider container */}
       <div
         ref={containerRef}
-        className="relative aspect-[5/2] w-full overflow-hidden rounded-2xl select-none"
+        className={`relative aspect-[5/2] w-full overflow-hidden select-none ${
+          hasLabels ? 'rounded-b-2xl' : 'rounded-2xl'
+        }`}
         onMouseMove={onPointerMove}
         onMouseUp={stopDrag}
         onTouchMove={onPointerMove}
         onTouchEnd={stopDrag}
       >
         {/* Left panel — base layer, fully visible underneath. */}
-        <div className="absolute left-0 top-0 w-full h-full rounded-2xl select-none">
-          {left}
-        </div>
+        <div className="absolute left-0 top-0 w-full h-full select-none">{left}</div>
 
         {/* Right panel — overlaid at z-10, clipped from the left. */}
         <div
-          className="absolute left-0 top-0 z-10 w-full h-full rounded-2xl select-none"
+          className="absolute left-0 top-0 z-10 w-full h-full select-none"
           style={{ clipPath: `inset(0 0 0 ${position}%)` }}
         >
           {right}

@@ -24,11 +24,18 @@ export function Hero() {
 
       {/* Hero image pinned to the bottom. Above the grid so the texture doesn't
           read through the ASCII artwork. */}
+      {/* width/height are the PNG's intrinsic pixels. They are not render sizes
+          (h-auto overrides that) — they give the browser the aspect ratio so it
+          reserves the correct height before the image downloads. Without them
+          the box collapses to the 150px default and the copy above visibly
+          jumps when the image finally lands. */}
       <img
         src={heroImg}
         alt=""
+        width={3842}
+        height={1621}
         draggable={false}
-        className="relative z-10 w-full h-auto pointer-events-none select-none"
+        className="relative z-10 block w-full h-auto aspect-[3842/1621] pointer-events-none select-none"
       />
     </section>
   );

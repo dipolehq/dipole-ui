@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 
 import { env } from '@config/env';
-import { Footer } from '@components/layout/Footer';
-import { Navbar } from '@components/layout/Navbar';
 import {
   Differentiators,
   Hero,
@@ -25,7 +23,6 @@ export function LandingPage() {
   return (
     <>
       <div className="relative w-full">
-        <Navbar />
         {/* Offset the fixed navbar so the hero starts flush beneath it. */}
         <div className="mt-16">
           <Hero />
@@ -37,7 +34,6 @@ export function LandingPage() {
       <Differentiators />
       <Speedup />
       <InAction />
-      <Footer />
     </>
   );
 }

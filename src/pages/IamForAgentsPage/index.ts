@@ -1,0 +1,1 @@
+export { IamForAgentsPage } from './IamForAgentsPage';

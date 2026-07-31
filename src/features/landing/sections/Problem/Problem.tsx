@@ -33,23 +33,29 @@ export function Problem() {
 
         <div className="mt-4">
           <ComparisonSlider
+            // Tabs are styled to match the panel each one labels, so they read as
+            // attached to their own half of the comparison.
+            leftLabel={
+              <span className="inline-flex items-center px-6 py-2.5 rounded-t-xl bg-white text-[0.95rem] font-normal tracking-[-0.01em] text-[#0b0d0e]">
+                Human Identities
+              </span>
+            }
+            rightLabel={
+              <span className="inline-flex items-center px-6 py-2.5 rounded-t-xl bg-[#1a1d20] border-t border-x border-white/15 text-[0.95rem] font-normal tracking-[-0.01em] text-white">
+                Agent Identities
+              </span>
+            }
             left={
               // items-stretch so the copy column can top-align with the diagram;
               // items-center would vertically centre it instead.
               <div className="w-full h-full bg-white flex items-stretch p-4">
-                {/* Heading centred over the diagram it labels. */}
-                <div className="w-1/2 h-full flex flex-col pr-[3%]">
-                  <h3 className="m-0 mb-3 text-center text-[1rem] font-bold tracking-[-0.01em] text-[#0b0d0e] underline underline-offset-[6px] decoration-[3px] decoration-[#0b0d0e]">
-                    Human Identities
-                  </h3>
-                  <div className="flex-1 min-h-0 flex items-center justify-center">
-                    <img
-                      src={leftProblemImg}
-                      alt="Human access management — solved"
-                      className="h-full object-contain pointer-events-none select-none"
-                      draggable={false}
-                    />
-                  </div>
+                <div className="w-1/2 h-full flex items-center justify-center pr-[3%]">
+                  <img
+                    src={leftProblemImg}
+                    alt="Human access management — solved"
+                    className="h-full object-contain pointer-events-none select-none"
+                    draggable={false}
+                  />
                 </div>
 
                 <CapabilityPanel
@@ -61,7 +67,7 @@ export function Problem() {
               </div>
             }
             right={
-              <div className="w-full h-full bg-[#0b0d0e] flex items-stretch p-4">
+              <div className="w-full h-full bg-[#1a1d20] flex items-stretch p-4">
                 <CapabilityPanel
                   surface="dark"
                   marker="cross"
@@ -70,19 +76,13 @@ export function Problem() {
                   intro="Thousands of API keys and tokens scattered across vaults, env vars, and config files. No identity attached, no expiry set, no way to know who used them."
                 />
 
-                {/* Heading centred over the diagram it labels. */}
-                <div className="w-1/2 h-full flex flex-col pl-[3%]">
-                  <h3 className="m-0 mb-3 text-center text-[1rem] font-bold tracking-[-0.01em] text-white underline underline-offset-[6px] decoration-[3px] decoration-white">
-                    Agent Identities
-                  </h3>
-                  <div className="flex-1 min-h-0 flex items-center justify-center">
-                    <img
-                      src={rightProblemImg}
-                      alt="Agent access management — broken"
-                      className="h-full object-contain pointer-events-none select-none translate-x-[-3.5%] translate-y-[0.5%]"
-                      draggable={false}
-                    />
-                  </div>
+                <div className="w-1/2 h-full flex items-center justify-center pl-[3%]">
+                  <img
+                    src={rightProblemImg}
+                    alt="Agent access management — broken"
+                    className="h-full object-contain pointer-events-none select-none translate-x-[-3.5%] translate-y-[0.5%]"
+                    draggable={false}
+                  />
                 </div>
               </div>
             }
