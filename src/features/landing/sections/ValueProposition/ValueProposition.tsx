@@ -1,4 +1,3 @@
-import { FlickeringGrid } from '@components/effects/FlickeringGrid';
 import { ValueCard } from '@components/ui/ValueCard';
 
 import { EXECUTION_EDGE, TECHNICAL_EDGE, type ValuePropositionCard } from './content';
@@ -14,12 +13,7 @@ const CARD_GROUPS: { label: string; cards: ValuePropositionCard[]; className: st
  */
 export function ValueProposition() {
   return (
-    <section className="relative w-full py-12 pb-20 bg-[#0b0d0e] overflow-hidden">
-      {/* Flickering grid backdrop — sits behind the content. */}
-      <div className="absolute inset-0 z-0">
-        <FlickeringGrid theme="onDark" />
-      </div>
-
+    <section className="relative w-full py-12 pb-20 bg-[#1C3B37] overflow-hidden">
       <div className="relative z-10 w-full max-w-full mx-auto">
         <h2 className="m-0 mb-10 px-[2.5%] text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-[1.2] text-white tracking-[-0.02em]">
           Dipole's Value Proposition

@@ -26,7 +26,7 @@ export function DifferentiatorTabs() {
             onClick={() => setActiveTab(tab)}
             className={`inline-flex items-center gap-2 px-5 py-2.5 text-[0.9rem] font-medium rounded-full cursor-pointer transition-colors duration-200 border-none ${
               activeTab === tab
-                ? 'bg-[#0b0d0e] text-white'
+                ? 'bg-[#1C3B37] text-white'
                 : 'bg-[#f1f1f1] text-[#0b0d0e]/70 hover:bg-[#e5e5e5]'
             }`}
           >

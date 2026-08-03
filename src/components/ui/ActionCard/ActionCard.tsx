@@ -11,7 +11,7 @@ export interface ActionCardProps {
 export function ActionCard({ title, description, className = '' }: ActionCardProps) {
   return (
     <div
-      className={`flex flex-col h-full p-8 bg-[#0b0d0e] rounded-2xl ${className}`.trim()}
+      className={`flex flex-col h-full p-8 bg-[#1C3B37] rounded-2xl ${className}`.trim()}
     >
       <h3 className="m-0 mb-3 text-[1.15rem] font-semibold leading-[1.3] text-white">
         {title}

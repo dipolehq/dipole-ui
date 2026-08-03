@@ -15,7 +15,7 @@ import { PRODUCT_COLUMNS, USE_CASE_COLUMNS } from './navItems';
 export function Navbar() {
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-100 flex items-center justify-between h-16 px-12 bg-[#0b0d0e]"
+      className="fixed top-0 left-0 right-0 z-100 flex items-center justify-between h-16 px-12 bg-[#1C3B37]"
       aria-label="Main navigation"
     >
       {/* Left */}

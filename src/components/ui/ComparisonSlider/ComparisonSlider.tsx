@@ -130,10 +130,10 @@ export function ComparisonSlider({
 
         {/* Divider line */}
         <div
-          className="bg-white/50 h-full w-1 absolute z-20 top-0 -ml-[2px] select-none"
+          className="bg-[#1C3B37] h-full w-[3px] absolute z-20 top-0 -ml-[1.5px] select-none"
           style={{ left: `${position}%` }}
         >
-          {/* Handle — vertical pill with grip icon */}
+          {/* Handle — circular with left/right arrows */}
           <button
             type="button"
             aria-label="Drag to compare"
@@ -147,21 +147,30 @@ export function ComparisonSlider({
             onTouchStart={startDrag}
             onMouseUp={stopDrag}
             onTouchEnd={stopDrag}
-            className="bg-white/90 rounded hover:scale-110 transition-all w-5 h-10 select-none -translate-y-1/2 absolute top-1/2 -ml-2 z-30 cursor-ew-resize flex justify-center items-center shadow-[0_2px_8px_rgba(0,0,0,0.3)]"
+            className="w-12 h-12 rounded-full border-[3px] border-[#1C3B37] bg-white select-none -translate-y-1/2 absolute top-1/2 -ml-[22.5px] z-30 cursor-ew-resize flex justify-center items-center shadow-[0_2px_12px_rgba(0,0,0,0.2)] hover:scale-110 transition-all"
           >
-            {/* GripVertical equivalent — 6 dots in a 2×3 grid */}
+            {/* Left/right chevrons */}
             <svg
-              className="h-4 w-4 text-[#0b0d0e] select-none"
+              className="h-5 w-5 text-[#1C3B37] select-none"
               viewBox="0 0 24 24"
-              fill="currentColor"
-              stroke="none"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
-              <circle cx="9" cy="6" r="1.5" />
-              <circle cx="15" cy="6" r="1.5" />
-              <circle cx="9" cy="12" r="1.5" />
-              <circle cx="15" cy="12" r="1.5" />
-              <circle cx="9" cy="18" r="1.5" />
-              <circle cx="15" cy="18" r="1.5" />
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+            <svg
+              className="h-5 w-5 text-[#1C3B37] select-none -ml-1"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="9 18 15 12 9 6" />
             </svg>
           </button>
         </div>

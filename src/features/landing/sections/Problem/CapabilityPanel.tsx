@@ -32,9 +32,9 @@ const SURFACE = {
   },
   dark: {
     eyebrow: 'text-red-400',
-    intro: 'text-white/75',
-    label: 'text-white',
-    divider: 'border-white/[0.10]',
+    intro: 'text-[#1C3B37]/75',
+    label: 'text-[#1C3B37]',
+    divider: 'border-[#1C3B37]/[0.09]',
   },
 } as const satisfies Record<Surface, Record<string, string>>;
 

@@ -1,4 +1,3 @@
-import { FlickeringGrid } from '@components/effects/FlickeringGrid';
 import { ActionCard } from '@components/ui/ActionCard';
 
 import { IN_ACTION_ITEMS } from './content';
@@ -9,13 +8,7 @@ import { IN_ACTION_ITEMS } from './content';
  */
 export function InAction() {
   return (
-    <section className="relative w-full py-16 bg-white">
-      {/* Flickering grid backdrop. Absolutely positioned children paint above
-          in-flow content, so the content wrapper below needs its own layer. */}
-      <div className="absolute inset-0 z-0">
-        <FlickeringGrid theme="onLight" />
-      </div>
-
+    <section className="relative w-full py-16 bg-[#f9f7f3]">
       <div className="relative z-10 w-full max-w-full mx-auto px-[2.5%]">
         <h2 className="m-0 mb-10 text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-[1.2] text-[#0b0d0e] tracking-[-0.02em]">
           Dipole in Action.

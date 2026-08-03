@@ -1,5 +1,4 @@
 import footerArt from '@assets/images/footer.avif';
-import { FlickeringGrid } from '@components/effects/FlickeringGrid';
 import { Brand } from '@components/ui/Brand';
 
 import { FOOTER_COLUMNS } from './content';
@@ -12,12 +11,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative w-full bg-[#0b0d0e] text-white overflow-hidden">
-      {/* Flickering grid backdrop — behind both the links and the artwork. */}
-      <div className="absolute inset-0 z-0">
-        <FlickeringGrid theme="onDark" />
-      </div>
-
+    <footer className="relative w-full bg-[#1C3B37] text-white overflow-hidden">
       {/* px-12 matches the navbar's horizontal padding so the footer brand
           lockup lines up exactly with the one in the header. */}
       <div className="relative z-10 px-12 pt-14">

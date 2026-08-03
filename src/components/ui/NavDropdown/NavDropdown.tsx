@@ -57,7 +57,7 @@ const THEMES: Record<
   }
 > = {
   dark: {
-    panel: 'bg-[#0b0d0e] shadow-[0_24px_60px_rgba(0,0,0,0.6)]',
+    panel: 'bg-[#1C3B37] shadow-[0_24px_60px_rgba(0,0,0,0.6)]',
     divider: 'border-white/10',
     rule: 'border-white/20',
     iconBox: 'border-white/20 text-white/80 group-hover:border-white/45',

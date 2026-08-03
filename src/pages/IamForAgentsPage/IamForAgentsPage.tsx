@@ -1,7 +1,6 @@
 import iamForAgentLeftImg from '@assets/images/product_agents/iam_for_agent_left.png';
 import iamForAgentRightImg from '@assets/images/product_agents/iam_for_agent_right.png';
 import managementConsoleImg from '@assets/images/product_agents/iam_for_agents__management_console.png';
-import { FlickeringGrid } from '@components/effects/FlickeringGrid';
 import { ComparisonSlider } from '@components/ui/ComparisonSlider';
 import { ValueCard } from '@components/ui/ValueCard';
 
@@ -17,13 +16,7 @@ import { AGENT_FEATURES } from './content';
 export function IamForAgentsPage() {
   return (
     <>
-      <section className="relative w-full bg-white overflow-hidden">
-        {/* Decorative backdrop. The navbar is fixed and opaque, so it renders
-            above this. */}
-        <div className="absolute inset-0 z-0">
-          <FlickeringGrid theme="onLight" />
-        </div>
-
+      <section className="relative w-full bg-[#f9f7f3] overflow-hidden">
         {/* mt-16 clears the fixed navbar; pt-10 is the heading's own breathing room. */}
         <div className="relative z-10 mt-16 pt-10 pb-16 px-[2.5%]">
           <h1 className="m-0 text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-[1.2] tracking-[-0.02em] text-[#0b0d0e]">
@@ -41,17 +34,17 @@ export function IamForAgentsPage() {
               // Tabs are styled to match the panel each one labels, so they read
               // as attached to their own half of the comparison.
               leftLabel={
-                <span className="inline-flex items-center px-6 py-2.5 rounded-t-xl bg-[#1a1d20] text-[0.95rem] font-normal tracking-[-0.01em] text-white">
+                <span className="inline-flex items-center px-6 py-2.5 rounded-t-xl bg-[#ffffff] text-[0.95rem] font-normal tracking-[-0.01em] text-black">
                   Before Dipole
                 </span>
               }
               rightLabel={
-                <span className="inline-flex items-center px-6 py-2.5 rounded-t-xl bg-white border-t border-x border-[#0b0d0e]/15 text-[0.95rem] font-normal tracking-[-0.01em] text-[#0b0d0e]">
+                <span className="inline-flex items-center px-6 py-2.5 rounded-t-xl bg-white text-[0.95rem] font-normal tracking-[-0.01em] text-[#0b0d0e]">
                   After Dipole
                 </span>
               }
               left={
-                <div className="w-full h-full bg-[#1a1d20] flex items-center justify-center p-6">
+                <div className="w-full h-full bg-[#ffffff] flex items-center justify-center p-6">
                   <img
                     src={iamForAgentLeftImg}
                     alt="Agent access without Dipole"
@@ -70,7 +63,7 @@ export function IamForAgentsPage() {
                     width={3872}
                     height={1633}
                     draggable={false}
-                    className="block w-full h-full object-contain pointer-events-none select-none scale-105"
+                    className="block w-full h-full object-contain pointer-events-none select-none scale-105 translate-x-2 -translate-y-1"
                   />
                 </div>
               }
@@ -80,11 +73,7 @@ export function IamForAgentsPage() {
       </section>
 
       {/* Features section. */}
-      <section className="relative w-full min-h-[60vh] py-16 bg-[#0b0d0e] overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <FlickeringGrid theme="onDark" />
-        </div>
-
+      <section className="relative w-full min-h-[60vh] py-16 bg-[#1C3B37] overflow-hidden">
         <div className="relative z-10 w-full px-[2.5%]">
           <h2 className="m-0 mb-10 text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-[1.2] text-white tracking-[-0.02em]">
             Every Agent. Every Request. Secured.
@@ -146,11 +135,7 @@ export function IamForAgentsPage() {
       </section>
 
       {/* Closing light section — content to follow. */}
-      <section className="relative w-full min-h-[60vh] py-16 bg-white overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <FlickeringGrid theme="onLight" />
-        </div>
-
+      <section className="relative w-full min-h-[60vh] py-16 bg-[#f9f7f3] overflow-hidden">
         <div className="relative z-10 w-full px-[2.5%]" />
       </section>
     </>

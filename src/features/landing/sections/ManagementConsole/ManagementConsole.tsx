@@ -1,5 +1,4 @@
 import accessPolicyImg from '@assets/images/access_policy.webp';
-import { FlickeringGrid } from '@components/effects/FlickeringGrid';
 
 /**
  * Management console section — narrative copy on the left, a screenshot of the
@@ -7,13 +6,7 @@ import { FlickeringGrid } from '@components/effects/FlickeringGrid';
  */
 export function ManagementConsole() {
   return (
-    <section className="relative w-full py-12 bg-white">
-      {/* Flickering grid backdrop. Absolutely positioned children paint above
-          in-flow content, so the content wrapper below needs its own layer. */}
-      <div className="absolute inset-0 z-0">
-        <FlickeringGrid theme="onLight" />
-      </div>
-
+    <section className="relative w-full py-12 bg-[#f9f7f3]">
       <div className="relative z-10 w-full max-w-full mx-auto">
         <h2 className="m-0 mb-10 px-[2.5%] text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-[1.2] text-[#0b0d0e] tracking-[-0.02em]">
           Dipole is the management console you need.
@@ -38,7 +31,7 @@ export function ManagementConsole() {
             </p>
             <a
               href="#"
-              className="inline-flex items-center mt-4 px-6 py-3 text-[0.9rem] font-medium text-white bg-[#0b0d0e] rounded-lg no-underline transition-opacity duration-200 hover:opacity-80"
+              className="inline-flex items-center mt-4 px-6 py-3 text-[0.9rem] font-medium text-white bg-[#1C3B37] rounded-lg no-underline transition-opacity duration-200 hover:opacity-80"
             >
               See How It Works
             </a>
