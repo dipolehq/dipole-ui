@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom';
 
 import { ROUTES } from '@app/router/routes';
 import { Brand } from '@components/ui/Brand';
-import { NavDropdown } from '@components/ui/NavDropdown';
+import { MorphingNavMenu } from '@components/ui/MorphingNavMenu';
 
 import { PRODUCT_COLUMNS, USE_CASE_COLUMNS } from './navItems';
 
 /**
  * Top navigation bar.
  * Left: Brand lockup (logo + name)
- * Center: nav links, with mega-menus driven by `NavDropdown`
+ * Center: nav links, with a morphing mega-menu for Product + Use Cases
  * Right: two CTA buttons
  */
 export function Navbar() {
@@ -25,9 +25,12 @@ export function Navbar() {
 
       {/* Center */}
       <div className="flex items-center gap-1">
-        <NavDropdown label="Product" theme="dark" columns={PRODUCT_COLUMNS} />
-
-        <NavDropdown label="Use Cases" theme="dark" columns={USE_CASE_COLUMNS} />
+        <MorphingNavMenu
+          items={[
+            { label: 'Product', columns: PRODUCT_COLUMNS },
+            { label: 'Use Cases', columns: USE_CASE_COLUMNS },
+          ]}
+        />
 
         <a href="#" className="inline-flex items-center px-4 py-2 text-[0.9rem] font-normal tracking-[0.01em] text-white/50 no-underline rounded-lg transition-colors duration-200 hover:text-white">
           Docs

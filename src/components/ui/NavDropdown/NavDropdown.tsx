@@ -57,7 +57,7 @@ const THEMES: Record<
   }
 > = {
   dark: {
-    panel: 'bg-[#1C3B37] shadow-[0_24px_60px_rgba(0,0,0,0.6)]',
+    panel: 'bg-[#1C3B37]',
     divider: 'border-white/10',
     rule: 'border-white/20',
     iconBox: 'border-white/20 text-white/80 group-hover:border-white/45',
@@ -169,11 +169,22 @@ export function NavDropdown({
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen((v) => !v)}
-        className={`inline-flex items-center px-4 py-2 text-[0.9rem] font-normal tracking-[0.01em] bg-transparent border-none rounded-lg cursor-pointer transition-colors duration-200 ${
-          open ? 'text-white bg-white/[0.06]' : 'text-white/50 hover:text-white'
+        className={`inline-flex items-center gap-1 px-4 py-2 text-[0.9rem] font-normal tracking-[0.01em] bg-transparent border-none rounded-lg cursor-pointer transition-colors duration-200 ${
+          open ? 'text-white' : 'text-white/50 hover:text-white'
         }`}
       >
         {label}
+        <svg
+          className={`w-3.5 h-3.5 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
       </button>
 
       {/* Fixed rather than absolute so the panel is centred on the viewport
@@ -182,7 +193,7 @@ export function NavDropdown({
       <div
         id={panelId}
         aria-labelledby={triggerId}
-        className={`fixed top-16 left-1/2 ${PANEL_WIDTH} ${t.panel} rounded-b-[3px] transition-all duration-200 ease-out ${
+        className={`fixed top-16 left-1/2 ${PANEL_WIDTH} ${t.panel} transition-all duration-200 ease-out ${
           open
             ? 'opacity-100 visible -translate-x-1/2 translate-y-0'
             : 'opacity-0 invisible -translate-x-1/2 -translate-y-1 pointer-events-none'
@@ -204,7 +215,7 @@ export function NavDropdown({
               >
                 {/* Eyebrow, with a dashed rule filling the remaining width. */}
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="font-mono text-[0.66rem] font-medium tracking-[0.18em] uppercase text-[var(--color-accent)] whitespace-nowrap">
+                  <span className="font-mono text-[0.66rem] font-medium tracking-[0.18em] uppercase text-white/50 whitespace-nowrap">
                     // {column.label}
                   </span>
                   <span className={`flex-1 border-t border-dashed ${t.rule}`} aria-hidden="true" />
@@ -245,7 +256,7 @@ export function NavDropdown({
                             {formatIndex(offset + itemIndex + 1)}
                           </span>
                           {item.cta && (
-                            <span className="inline-flex items-center gap-1.5 px-2 py-1 font-mono text-[0.58rem] font-medium tracking-[0.12em] uppercase text-[var(--color-accent)] border border-[var(--color-accent)]/50 rounded-[2px] whitespace-nowrap transition-colors duration-150 group-hover:border-[var(--color-accent)]">
+                            <span className="inline-flex items-center gap-1.5 px-2 py-1 font-mono text-[0.58rem] font-medium tracking-[0.12em] uppercase text-white/50 border border-white/25 rounded-[2px] whitespace-nowrap transition-colors duration-150 group-hover:border-white/50">
                               {item.cta.label}
                               <span aria-hidden="true">→</span>
                             </span>
