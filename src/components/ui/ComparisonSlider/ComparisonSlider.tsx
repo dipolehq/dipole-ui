@@ -109,7 +109,7 @@ export function ComparisonSlider({
       {/* Slider container */}
       <div
         ref={containerRef}
-        className={`relative aspect-[5/2] w-full overflow-hidden select-none ${
+        className={`relative aspect-[12/4] w-full overflow-hidden select-none ${
           hasLabels ? 'rounded-b-2xl' : 'rounded-2xl'
         }`}
         onMouseMove={onPointerMove}

@@ -1,12 +1,16 @@
 import iamForAgentLeftImg from '@assets/images/product_agents/iam_for_agent_left.png';
 import iamForAgentRightImg from '@assets/images/product_agents/iam_for_agent_right.png';
+import managementConsoleImg from '@assets/images/product_agents/iam_for_agents__management_console.png';
 import { FlickeringGrid } from '@components/effects/FlickeringGrid';
 import { ComparisonSlider } from '@components/ui/ComparisonSlider';
+import { ValueCard } from '@components/ui/ValueCard';
+
+import { AGENT_FEATURES } from './content';
 
 /**
- * "IAM for Agents" product page. Scaffold for now: a white intro section with
- * the flickering backdrop, heading, copy and comparison slider, followed by a
- * dark section.
+ * "IAM for Agents" product page. A white intro section with the flickering
+ * backdrop, heading, copy and before/after comparison slider, followed by a
+ * dark features section.
  *
  * The navbar and footer come from `SiteLayout`.
  */
@@ -75,11 +79,79 @@ export function IamForAgentsPage() {
         </div>
       </section>
 
-      {/* Dark section — content to follow. */}
+      {/* Features section. */}
       <section className="relative w-full min-h-[60vh] py-16 bg-[#0b0d0e] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <FlickeringGrid theme="onDark" />
         </div>
+
+        <div className="relative z-10 w-full px-[2.5%]">
+          <h2 className="m-0 mb-10 text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-[1.2] text-white tracking-[-0.02em]">
+            Every Agent. Every Request. Secured.
+          </h2>
+
+          <div className="mt-10 flex items-start gap-8">
+            <div className="w-[30%] shrink-0">
+              <p className="m-0 mb-5 text-[0.92rem] font-light leading-[1.75] text-white/55 text-left">
+                Dipole's management console gives you complete visibility and end-to-end auditability of every action performed by your agentic stack across your systems.
+              </p>
+              <p className="m-0 mb-4 text-[0.92rem] font-normal leading-[1.75] text-white/85 text-left">
+                Discover which agent, acting on behalf of which user, accessed which MCP servers and resources, under what conditions, and when.
+              </p>
+              <a
+                href="#"
+                className="inline-flex items-center mt-4 px-6 py-3 text-[0.9rem] font-medium text-[#0b0d0e] bg-white rounded-lg no-underline transition-opacity duration-200 hover:opacity-80"
+              >
+                See How It Works
+              </a>
+            </div>
+
+            <div className="flex-1 min-w-0">
+              <img
+                src={managementConsoleImg}
+                alt="Dipole management console showing agent identities, policies and audit logs"
+                width={2048}
+                height={1071}
+                className="block w-full h-auto aspect-[2048/1071] pointer-events-none select-none"
+                draggable={false}
+              />
+            </div>
+          </div>
+
+          <h2 className="m-0 mt-20 mb-10 text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-[1.2] text-white tracking-[-0.02em]">
+            Features of IAM for Agentic AI
+          </h2>
+
+          {/* auto-rows keeps every card the same fixed height across both rows,
+              matching the value proposition grid on the landing page. */}
+          <div className="grid grid-cols-3 gap-5 auto-rows-[300px]">
+            {AGENT_FEATURES.map((feature) => (
+              <ValueCard
+                key={feature.title}
+                title={feature.title}
+                description={feature.description}
+                icon={
+                  <img
+                    src={feature.icon}
+                    alt=""
+                    width="56"
+                    height="56"
+                    className="w-full h-full object-contain"
+                  />
+                }
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Closing light section — content to follow. */}
+      <section className="relative w-full min-h-[60vh] py-16 bg-white overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <FlickeringGrid theme="onLight" />
+        </div>
+
+        <div className="relative z-10 w-full px-[2.5%]" />
       </section>
     </>
   );
