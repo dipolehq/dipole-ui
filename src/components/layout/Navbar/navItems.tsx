@@ -149,7 +149,7 @@ export const USE_CASE_COLUMNS: NavDropdownColumn[] = [
         title: 'Secure MCP Servers',
         description:
           'Secure how your agents access MCP servers and gain full visibility into who accessed what',
-        href: '#',
+        href: '/secure-mcp-access',
         // MCP server: a hub exposing tools to callers.
         icon: icon(
           <>

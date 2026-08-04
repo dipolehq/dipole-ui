@@ -7,6 +7,7 @@ export const ROUTES = {
   pricing: '/pricing',
   iamForAgents: '/iam-for-agents',
   secureCiCd: '/secure-ci-cd-access',
+  secureMcp: '/secure-mcp-access',
   notFound: '*',
 } as const;
 

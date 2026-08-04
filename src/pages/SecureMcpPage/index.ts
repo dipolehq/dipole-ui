@@ -1,0 +1,1 @@
+export { SecureMcpPage } from './SecureMcpPage';
