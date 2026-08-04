@@ -6,6 +6,7 @@ import { IamForAgentsPage } from '@pages/IamForAgentsPage';
 import { LandingPage } from '@pages/LandingPage';
 import { NotFoundPage } from '@pages/NotFoundPage';
 import { PricingPage } from '@pages/PricingPage';
+import { SecureCiCdPage } from '@pages/SecureCiCdPage';
 
 /**
  * Route tree. Paths come from `ROUTES` so they stay in sync with in-app links.
@@ -20,6 +21,7 @@ export function AppRouter() {
           <Route path={ROUTES.home} element={<LandingPage />} />
           <Route path={ROUTES.pricing} element={<PricingPage />} />
           <Route path={ROUTES.iamForAgents} element={<IamForAgentsPage />} />
+          <Route path={ROUTES.secureCiCd} element={<SecureCiCdPage />} />
           <Route path={ROUTES.notFound} element={<NotFoundPage />} />
         </Route>
       </Routes>

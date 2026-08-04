@@ -6,6 +6,7 @@ export const ROUTES = {
   home: '/',
   pricing: '/pricing',
   iamForAgents: '/iam-for-agents',
+  secureCiCd: '/secure-ci-cd-access',
   notFound: '*',
 } as const;
 

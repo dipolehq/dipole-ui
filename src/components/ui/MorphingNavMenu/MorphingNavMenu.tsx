@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import type { NavDropdownColumn } from '@components/ui/NavDropdown';
 
@@ -48,6 +49,7 @@ export function MorphingNavMenu({ items }: MorphingNavMenuProps) {
 
   const rootRef = useRef<HTMLDivElement>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout>>();
+  const navigate = useNavigate();
 
   const cancelClose = useCallback(() => clearTimeout(closeTimer.current), []);
 
@@ -66,6 +68,18 @@ export function MorphingNavMenu({ items }: MorphingNavMenuProps) {
     setDirection(0);
     setShouldSlide(false);
   }, []);
+
+  const handleNavigate = useCallback(
+    (href: string) => {
+      closeNow();
+      if (href.startsWith('/')) {
+        navigate(href);
+      } else {
+        window.location.href = href;
+      }
+    },
+    [closeNow, navigate],
+  );
 
   const activate = useCallback(
     (index: number) => {
@@ -186,7 +200,7 @@ export function MorphingNavMenu({ items }: MorphingNavMenuProps) {
                   isCurrent ? 'relative' : 'absolute inset-0'
                 } ${isCurrent ? 'opacity-100' : 'opacity-0'}`}
               >
-                <PanelContent columns={item.columns} onNavigate={closeNow} />
+                <PanelContent columns={item.columns} onNavigate={handleNavigate} />
               </div>
             );
           })}
@@ -209,7 +223,7 @@ const GRID_COLUMNS: Record<number, string> = {
 
 interface PanelContentProps {
   columns: NavDropdownColumn[];
-  onNavigate: () => void;
+  onNavigate: (href: string) => void;
 }
 
 function PanelContent({ columns, onNavigate }: PanelContentProps) {
@@ -243,7 +257,10 @@ function PanelContent({ columns, onNavigate }: PanelContentProps) {
                 <li key={item.title}>
                   <a
                     href={item.href}
-                    onClick={onNavigate}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onNavigate(item.href);
+                    }}
                     className="group flex items-start gap-3.5 px-2 py-2.5 -mx-2 no-underline rounded-[4px] transition-colors duration-150 hover:bg-white/[0.04]"
                   >
                     <span

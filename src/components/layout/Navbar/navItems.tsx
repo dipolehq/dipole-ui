@@ -166,7 +166,7 @@ export const USE_CASE_COLUMNS: NavDropdownColumn[] = [
         title: 'Secure CI/CD',
         description:
           'Reduce the secret sprawl and leakage in software deployment with secretless approach',
-        href: '#',
+        href: '/secure-ci-cd-access',
         // CI/CD: branch merging back into the trunk.
         icon: icon(
           <>
