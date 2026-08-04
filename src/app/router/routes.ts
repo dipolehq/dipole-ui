@@ -8,6 +8,7 @@ export const ROUTES = {
   iamForAgents: '/iam-for-agents',
   secureCiCd: '/secure-ci-cd-access',
   secureMcp: '/secure-mcp-access',
+  secureAutonomous: '/autonomous-access',
   notFound: '*',
 } as const;
 

@@ -6,6 +6,7 @@ import { IamForAgentsPage } from '@pages/IamForAgentsPage';
 import { LandingPage } from '@pages/LandingPage';
 import { NotFoundPage } from '@pages/NotFoundPage';
 import { PricingPage } from '@pages/PricingPage';
+import { SecureAutonomousPage } from '@pages/SecureAutonomousPage';
 import { SecureCiCdPage } from '@pages/SecureCiCdPage';
 import { SecureMcpPage } from '@pages/SecureMcpPage';
 
@@ -24,6 +25,7 @@ export function AppRouter() {
           <Route path={ROUTES.iamForAgents} element={<IamForAgentsPage />} />
           <Route path={ROUTES.secureCiCd} element={<SecureCiCdPage />} />
           <Route path={ROUTES.secureMcp} element={<SecureMcpPage />} />
+          <Route path={ROUTES.secureAutonomous} element={<SecureAutonomousPage />} />
           <Route path={ROUTES.notFound} element={<NotFoundPage />} />
         </Route>
       </Routes>

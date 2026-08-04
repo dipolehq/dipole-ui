@@ -134,7 +134,7 @@ export const USE_CASE_COLUMNS: NavDropdownColumn[] = [
         title: 'Secure Autonomous Agents',
         description:
           'Secure how your agents access your internal and external resources. ',
-        href: '#',
+        href: '/autonomous-access',
         // Autonomous: self-driving loop around a core.
         icon: icon(
           <>
