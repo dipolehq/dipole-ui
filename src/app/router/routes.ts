@@ -9,6 +9,7 @@ export const ROUTES = {
   secureCiCd: '/secure-ci-cd-access',
   secureMcp: '/secure-mcp-access',
   secureAutonomous: '/autonomous-access',
+  secureNhi: '/secure-nhi-access',
   notFound: '*',
 } as const;
 

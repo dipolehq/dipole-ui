@@ -107,7 +107,7 @@ export function IamForAgentsPage() {
             </div>
           </div>
 
-          <h2 className="m-0 mt-20 mb-10 text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-[1.2] text-white tracking-[-0.02em]">
+          <h2 className="m-0 mt-12 mb-10 text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-[1.2] text-white tracking-[-0.02em]">
             Features of IAM for Agentic AI
           </h2>
 

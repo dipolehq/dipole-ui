@@ -181,7 +181,7 @@ export const USE_CASE_COLUMNS: NavDropdownColumn[] = [
         title: 'Secure Non-Human Identities',
         description:
           'Enforce access policies and conditions on communication between non-human identities',
-        href: '#',
+        href: '/secure-nhi-access',
         // Machine-to-machine: two nodes talking both ways.
         icon: icon(
           <>

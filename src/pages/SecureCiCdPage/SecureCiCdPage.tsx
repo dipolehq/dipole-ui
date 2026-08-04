@@ -95,7 +95,7 @@ export function SecureCiCdPage() {
             </div>
           </div>
 
-          <h2 className="m-0 mt-20 text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-[1.2] tracking-[-0.02em] text-[#0b0d0e]">
+          <h2 className="m-0 mt-12 text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-[1.2] tracking-[-0.02em] text-[#0b0d0e]">
             Features of IAM for CI/CD
           </h2>
 
