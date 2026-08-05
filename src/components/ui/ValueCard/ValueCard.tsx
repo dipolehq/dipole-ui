@@ -18,10 +18,10 @@ export function ValueCard({ title, description, icon }: ValueCardProps) {
           {icon}
         </div>
       )}
-      <h3 className="m-0 mb-3 text-[1.1rem] font-semibold text-[#0b0d0e] leading-[1.3]">
+      <h3 className="m-0 mb-3 text-[1.1rem] font-semibold text-ink leading-snug">
         {title}
       </h3>
-      <p className="m-0 text-[0.88rem] font-light leading-[1.6] text-[#0b0d0e]/60">
+      <p className="m-0 text-[0.88rem] font-light leading-relaxed text-ink/60">
         {description}
       </p>
     </div>

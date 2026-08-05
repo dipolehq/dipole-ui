@@ -26,15 +26,15 @@ type Surface = 'light' | 'dark';
 const SURFACE = {
   light: {
     eyebrow: 'text-green-700',
-    intro: 'text-[#0b0d0e]/75',
-    label: 'text-[#0b0d0e]',
-    divider: 'border-[#0b0d0e]/[0.09]',
+    intro: 'text-ink/75',
+    label: 'text-ink',
+    divider: 'border-ink/[0.09]',
   },
   dark: {
     eyebrow: 'text-red-400',
-    intro: 'text-[#1C3B37]/75',
-    label: 'text-[#1C3B37]',
-    divider: 'border-[#1C3B37]/[0.09]',
+    intro: 'text-brand-green/75',
+    label: 'text-brand-green',
+    divider: 'border-brand-green/[0.09]',
   },
 } as const satisfies Record<Surface, Record<string, string>>;
 
@@ -72,14 +72,14 @@ export function CapabilityPanel({
   const icon = marker === 'tick' ? tickIcon : crossIcon;
 
   return (
-    <div className={`w-1/2 h-full flex flex-col justify-start ${topInset} px-10`}>
+    <div className={`w-1/2 h-full flex flex-col justify-start ${topInset} px-3 sm:px-6 lg:px-10`}>
       <span
         className={`font-mono text-[0.62rem] font-semibold tracking-[0.22em] uppercase ${tone.eyebrow}`}
       >
         {eyebrow}
       </span>
 
-      <p className={`m-0 mt-3 mb-7 max-w-[440px] text-[0.92rem] font-normal leading-[1.65] ${tone.intro}`}>
+      <p className={`m-0 mt-3 mb-7 max-w-[440px] text-[0.92rem] font-normal leading-relaxed ${tone.intro}`}>
         {intro}
       </p>
 

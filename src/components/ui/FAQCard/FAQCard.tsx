@@ -19,18 +19,18 @@ export function FAQCard({ question, answer, className = '' }: FAQCardProps) {
 
   return (
     <div
-      className={`border-b border-[#0b0d0e]/10 ${className}`.trim()}
+      className={`border-b border-ink/10 ${className}`.trim()}
     >
       <button
         type="button"
         onClick={() => setIsOpen((v) => !v)}
         className="w-full flex items-center justify-between gap-4 py-5 bg-transparent border-none cursor-pointer text-left"
       >
-        <span className="text-[0.95rem] font-medium leading-[1.4] text-[#0b0d0e]">
+        <span className="text-[0.95rem] font-medium leading-[1.4] text-ink">
           {question}
         </span>
         <svg
-          className={`w-5 h-5 shrink-0 text-[#0b0d0e]/40 transition-transform duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] ${
+          className={`w-5 h-5 shrink-0 text-ink/40 transition-transform duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] ${
             isOpen ? 'rotate-180' : ''
           }`}
           viewBox="0 0 24 24"
@@ -55,7 +55,7 @@ export function FAQCard({ question, answer, className = '' }: FAQCardProps) {
         }}
       >
         <div className="overflow-hidden">
-          <p className="m-0 pb-5 text-[0.9rem] font-light leading-[1.7] text-[#0b0d0e]/60">
+          <p className="m-0 pb-5 text-sm font-light leading-[1.7] text-ink/60">
             {answer}
           </p>
         </div>

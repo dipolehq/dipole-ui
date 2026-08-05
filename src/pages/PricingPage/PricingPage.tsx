@@ -23,28 +23,28 @@ export function PricingPage() {
   const plans = activeTab === 'Agentic AI' ? AGENTIC_AI_PLANS : WORKLOADS_PLANS;
 
   return (
-    <section className="relative w-full min-h-screen bg-[#f9f7f3] overflow-hidden">
-      {/* mt-16 clears the fixed navbar; pt-10 is the heading's own breathing room. */}
-      <div className="mt-16 pt-10 pb-20 px-[2.5%]">
-        <h1 className="m-0 text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-[1.2] tracking-[-0.02em] text-[#0b0d0e]">
+    <section className="relative w-full min-h-screen bg-off-white overflow-hidden">
+      {/* mt-16 clears the fixed navbar */}
+      <div className="mt-16 pt-8 sm:pt-10 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-8 xl:px-[2.5%]">
+        <h1 className="m-0 text-2xl sm:text-3xl lg:text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-tight tracking-tight text-ink">
           Fair. Simple. Transparent.
         </h1>
 
-        <p className="m-0 mt-5 max-w-[780px] text-[1rem] font-light leading-[1.7] text-[#0b0d0e]/65">
+        <p className="m-0 mt-4 sm:mt-5 text-sm sm:text-base font-light leading-relaxed text-ink/65">
           Start now. Upgrade as you grow. Use Dipole to manage your AI agents, MCP servers, and workloads with secure access to on-prem, cloud, and external resources.
         </p>
 
         {/* Tabs */}
-        <div className="mt-12 flex items-center gap-0 border-b border-[#0b0d0e]/10">
+        <div className="mt-6 sm:mt-8 flex items-center gap-0 border-b border-ink/10 overflow-x-auto">
           {PRICING_TABS.map((tab) => (
             <button
               key={tab}
               type="button"
               onClick={() => setActiveTab(tab)}
-              className={`inline-flex items-center gap-2 px-5 py-3 text-[0.92rem] font-medium cursor-pointer border-none bg-transparent transition-colors duration-200 ${
+              className={`inline-flex items-center gap-2 px-4 sm:px-5 py-3 text-sm sm:text-[0.92rem] font-medium cursor-pointer border-none bg-transparent transition-colors duration-200 whitespace-nowrap ${
                 activeTab === tab
-                  ? 'text-[#1C3B37] shadow-[inset_0_-2px_0_0_#1C3B37]'
-                  : 'text-[#0b0d0e]/50 hover:text-[#0b0d0e]/80'
+                  ? 'text-brand-green shadow-[inset_0_-2px_0_0_#1C3B37]'
+                  : 'text-ink/50 hover:text-ink/80'
               }`}
             >
               {tab === 'Agentic AI' && (
@@ -70,8 +70,8 @@ export function PricingPage() {
         </div>
 
         {/* Tab content — pricing cards */}
-        <div className="mt-10">
-          <div className="grid grid-cols-3 gap-6">
+        <div className="mt-8 sm:mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {plans.map((plan) => (
               <PricingCard key={plan.plan} {...plan} />
             ))}
@@ -79,26 +79,26 @@ export function PricingPage() {
         </div>
 
         {/* FAQ section */}
-        <h2 className="m-0 mt-20 text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-[1.2] tracking-[-0.02em] text-[#0b0d0e]">
+        <h2 className="m-0 mt-14 sm:mt-20 text-xl sm:text-2xl lg:text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-tight tracking-tight text-ink">
           Need Help Deciding?
         </h2>
 
-        <div className="mt-10 flex items-start gap-8 max-w-[85%]">
+        <div className="mt-8 sm:mt-10 flex flex-col lg:flex-row items-start gap-8">
           <div className="flex-1 min-w-0">
             {PRICING_FAQS.map((faq) => (
               <FAQCard key={faq.question} question={faq.question} answer={faq.answer} />
             ))}
           </div>
 
-          {/* Contact card on the right */}
-          <div className="w-[320px] shrink-0 sticky top-24 translate-x-30">
-            <div className="p-8 rounded-2xl bg-[#1C3B37]">
-              <h3 className="m-0 text-[1.15rem] font-semibold leading-[1.3] text-white">
-                Still Have Some Question, We've Got You?
+          {/* Contact card on the right — hidden on mobile, sticky on desktop */}
+          <div className="w-full lg:w-80 shrink-0 lg:sticky lg:top-24">
+            <div className="p-6 sm:p-8 rounded-2xl bg-brand-green">
+              <h3 className="m-0 text-base sm:text-[1.15rem] font-semibold leading-snug text-white">
+                Still Have Some Questions? We've Got You.
               </h3>
               <a
                 href="#"
-                className="w-[260px] inline-flex items-center gap-2 mt-5 px-5 py-2.5 text-[0.85rem] font-medium text-[#1C3B37] bg-white rounded-lg no-underline transition-opacity duration-200 hover:opacity-85"
+                className="inline-flex items-center gap-2 mt-5 px-5 py-2.5 text-sm font-medium text-brand-green bg-white rounded-lg no-underline transition-opacity duration-200 hover:opacity-85"
               >
                 Contact Us
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

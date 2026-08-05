@@ -2,27 +2,23 @@ import heroImg from '@assets/images/hero.png';
 
 /**
  * Hero section — heading and subheading above, hero image pinned to the bottom.
+ * Mobile: stacks naturally, no forced viewport height.
+ * Desktop: fills viewport below navbar.
  */
 export function Hero() {
   return (
-    <section className="relative w-full h-[calc(100vh-4rem)] bg-[#f9f7f3] overflow-hidden flex flex-col">
+    <section className="relative w-full min-h-[60vh] lg:h-[calc(100vh-4rem)] bg-off-white overflow-hidden flex flex-col">
       {/* Heading area */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-16 px-[2.5%]">
-        <h1 className="m-0 text-[clamp(2.5rem,5.5vw,4.5rem)] font-light leading-[1.1] tracking-[-0.03em] text-[#0b0d0e] text-center">
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-10 sm:pt-16 px-4 sm:px-6 lg:px-8 xl:px-[2.5%]">
+        <h1 className="m-0 text-3xl sm:text-4xl md:text-5xl lg:text-[clamp(2.5rem,5.5vw,4.5rem)] font-light leading-tight tracking-tighter text-ink text-center">
           Manage Identities, Not Credentials
         </h1>
-        <p className="m-0 mt-5 text-[1.05rem] font-light leading-[1.6] text-[#0b0d0e]/55 text-center">
+        <p className="m-0 mt-4 sm:mt-5 text-sm sm:text-base lg:text-[1.05rem] font-light leading-relaxed text-ink/55 text-center max-w-2xl">
           Dipole is a centralized and secretless identity & access management for agents and workloads.
         </p>
       </div>
 
-      {/* Hero image pinned to the bottom. Above the grid so the texture doesn't
-          read through the ASCII artwork. */}
-      {/* width/height are the PNG's intrinsic pixels. They are not render sizes
-          (h-auto overrides that) — they give the browser the aspect ratio so it
-          reserves the correct height before the image downloads. Without them
-          the box collapses to the 150px default and the copy above visibly
-          jumps when the image finally lands. */}
+      {/* Hero image pinned to the bottom */}
       <img
         src={heroImg}
         alt=""

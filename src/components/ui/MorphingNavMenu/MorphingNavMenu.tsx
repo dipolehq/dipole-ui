@@ -137,7 +137,7 @@ export function MorphingNavMenu({ items }: MorphingNavMenuProps) {
           type="button"
           onMouseEnter={() => activate(index)}
           onClick={() => activate(index)}
-          className={`inline-flex items-center gap-1 px-4 py-2 text-[0.9rem] font-normal tracking-[0.01em] bg-transparent border-none rounded-lg cursor-pointer transition-colors duration-200 ${
+          className={`inline-flex items-center gap-1 px-4 py-2 text-sm font-normal tracking-[0.01em] bg-transparent border-none rounded-lg cursor-pointer transition-colors duration-200 ${
             activeIndex === index ? 'text-white' : 'text-white/50 hover:text-white'
           }`}
         >
@@ -160,7 +160,7 @@ export function MorphingNavMenu({ items }: MorphingNavMenuProps) {
 
       {/* Shared panel — stays mounted while any trigger is active. */}
       <div
-        className={`fixed top-16 left-1/2 ${PANEL_WIDTH} bg-[#1C3B37] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+        className={`fixed top-16 left-1/2 ${PANEL_WIDTH} bg-brand-green transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
           isOpen
             ? 'opacity-100 visible -translate-x-1/2 translate-y-0'
             : 'opacity-0 invisible -translate-x-1/2 -translate-y-1 pointer-events-none'
@@ -271,10 +271,10 @@ function PanelContent({ columns, onNavigate }: PanelContentProps) {
                     </span>
 
                     <span className="min-w-0 flex-1">
-                      <span className="block text-[0.9rem] font-semibold leading-[1.35] text-white">
+                      <span className="block text-sm font-semibold leading-snug text-white">
                         {item.title}
                       </span>
-                      <span className="block mt-0.5 text-[0.78rem] font-light leading-[1.55] text-white/55">
+                      <span className="block mt-0.5 text-[0.78rem] font-light leading-normal text-white/55">
                         {item.description}
                       </span>
                     </span>

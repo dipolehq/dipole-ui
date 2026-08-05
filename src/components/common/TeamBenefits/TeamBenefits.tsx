@@ -89,41 +89,42 @@ const TEAM_COMPARISONS: TeamComparisonGroup[] = [
 /**
  * Shared "Every Team Gets What They Need. No Compromises." section.
  *
- * Dark green section with a heading and 4 team-specific Before/After comparison
- * tables (Security Teams, DevSecOps, Developers, Compliance). Used identically
- * across all use-case pages.
+ * Responsive:
+ * - Mobile: team label + stacked before/after cards (no table)
+ * - Tablet+: side-by-side table layout
  */
 export function TeamBenefits() {
   return (
-    <section className="w-full py-16 bg-[#1C3B37]">
-      <div className="px-[2.5%]">
-        <h2 className="m-0 text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-[1.2] tracking-[-0.02em] text-white">
+    <section className="w-full py-12 sm:py-16 bg-brand-green">
+      <div className="px-4 sm:px-6 lg:px-8 xl:px-[2.5%]">
+        <h2 className="m-0 text-2xl sm:text-3xl lg:text-[clamp(1.8rem,3.4vw,2.8rem)] font-light leading-tight tracking-tight text-white">
           Every Team Gets What They Need. No Compromises.
         </h2>
 
         {TEAM_COMPARISONS.map((group, groupIndex) => (
           <div
             key={group.team}
-            className={`flex items-start gap-10 ${
+            className={`flex flex-col md:flex-row items-start gap-4 md:gap-10 ${
               groupIndex === 0
-                ? 'mt-12'
-                : 'mt-12 pt-12 border-t border-white/10'
+                ? 'mt-8 sm:mt-12'
+                : 'mt-8 sm:mt-12 pt-8 sm:pt-12 border-t border-white/10'
             }`}
           >
-            <div className="w-[25%] shrink-0">
-              <h3 className="m-0 text-[1.1rem] font-semibold leading-[1.3] text-white">
+            <div className="w-full md:w-1/4 shrink-0">
+              <h3 className="m-0 text-base sm:text-lg font-semibold leading-snug text-white">
                 {group.team}
               </h3>
             </div>
 
-            <div className="flex-1 min-w-0">
-              <table className="w-full border-collapse">
+            <div className="flex-1 min-w-0 w-full">
+              {/* Desktop: table layout */}
+              <table className="hidden sm:table w-full border-collapse">
                 <thead>
                   <tr>
-                    <th className="w-1/2 pb-4 text-[0.85rem] font-semibold text-white/80 text-left border-b border-white/15">
+                    <th className="w-1/2 pb-4 text-sm font-semibold text-white/80 text-left border-b border-white/15">
                       Before
                     </th>
-                    <th className="w-1/2 pb-4 text-[0.85rem] font-semibold text-white/80 text-left border-b border-white/15 pl-8">
+                    <th className="w-1/2 pb-4 text-sm font-semibold text-white/80 text-left border-b border-white/15 pl-6 lg:pl-8">
                       After
                     </th>
                   </tr>
@@ -132,7 +133,7 @@ export function TeamBenefits() {
                   {group.rows.map((row, rowIndex) => (
                     <tr key={row.before}>
                       <td
-                        className={`py-4 pr-6 text-[0.88rem] font-light leading-[1.6] text-white/60 align-top ${
+                        className={`py-3 sm:py-4 pr-4 lg:pr-6 text-sm font-light leading-relaxed text-white/60 align-top ${
                           rowIndex < group.rows.length - 1
                             ? 'border-b border-white/8'
                             : ''
@@ -141,7 +142,7 @@ export function TeamBenefits() {
                         {row.before}
                       </td>
                       <td
-                        className={`py-4 pl-8 text-[0.88rem] font-light leading-[1.6] text-white/60 align-top ${
+                        className={`py-3 sm:py-4 pl-6 lg:pl-8 text-sm font-light leading-relaxed text-white/60 align-top ${
                           rowIndex < group.rows.length - 1
                             ? 'border-b border-white/8'
                             : ''
@@ -153,6 +154,26 @@ export function TeamBenefits() {
                   ))}
                 </tbody>
               </table>
+
+              {/* Mobile: stacked cards */}
+              <div className="flex sm:hidden flex-col gap-4">
+                {group.rows.map((row) => (
+                  <div key={row.before} className="rounded-lg bg-white/5 p-4">
+                    <div className="mb-2">
+                      <span className="text-xs font-semibold uppercase tracking-wider text-white/40">Before</span>
+                      <p className="m-0 mt-1 text-sm font-light leading-relaxed text-white/60">
+                        {row.before}
+                      </p>
+                    </div>
+                    <div>
+                      <span className="text-xs font-semibold uppercase tracking-wider text-white/40">After</span>
+                      <p className="m-0 mt-1 text-sm font-light leading-relaxed text-white/80">
+                        {row.after}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         ))}

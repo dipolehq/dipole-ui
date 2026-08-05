@@ -18,7 +18,7 @@ export interface UseCaseCardProps {
 export function UseCaseCard({ icon, title, description, className = '' }: UseCaseCardProps) {
   return (
     <div
-      className={`flex flex-col h-full p-6 bg-white rounded-2xl ${className}`.trim()}
+      className={`flex flex-col h-full p-6 bg-surface rounded-2xl ${className}`.trim()}
     >
       {/* Icon */}
       <div className="w-10 h-10 mb-5 flex items-center justify-center">
@@ -26,12 +26,12 @@ export function UseCaseCard({ icon, title, description, className = '' }: UseCas
       </div>
 
       {/* Title */}
-      <h3 className="m-0 mb-2 text-[0.95rem] font-semibold leading-[1.3] text-[#0b0d0e]">
+      <h3 className="m-0 mb-2 text-[0.95rem] font-semibold leading-snug text-ink">
         {title}
       </h3>
 
       {/* Description */}
-      <p className="m-0 text-[0.85rem] font-light leading-[1.65] text-[#0b0d0e]/55">
+      <p className="m-0 text-[0.85rem] font-light leading-relaxed text-ink/55">
         {description}
       </p>
     </div>

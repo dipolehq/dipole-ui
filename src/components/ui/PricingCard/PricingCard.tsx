@@ -35,31 +35,31 @@ export function PricingCard({
     <div
       className={`flex flex-col h-full p-8 rounded-2xl ${
         highlighted
-          ? 'bg-[#1C3B37] text-white'
-          : 'bg-white text-[#0b0d0e]'
+          ? 'bg-brand-green text-white'
+          : 'bg-white text-ink'
       } ${className}`.trim()}
     >
       {/* Plan name */}
       <span
         className={`font-mono text-[0.7rem] font-medium tracking-[0.16em] uppercase ${
-          highlighted ? 'text-white/50' : 'text-[#0b0d0e]/45'
+          highlighted ? 'text-white/50' : 'text-ink/45'
         }`}
       >
         {plan}
       </span>
 
       {/* Price */}
-      <h3 className="m-0 mt-3 text-[2rem] font-semibold leading-[1.2] tracking-[-0.02em]">
+      <h3 className="m-0 mt-3 text-[2rem] font-semibold leading-tight tracking-tight">
         {price}
         {priceUnit && (
-          <span className="text-[0.9rem] font-normal tracking-normal">{priceUnit}</span>
+          <span className="text-sm font-normal tracking-normal">{priceUnit}</span>
         )}
       </h3>
 
       {/* Description */}
       <p
-        className={`m-0 mt-3 text-[0.88rem] font-light leading-[1.6] ${
-          highlighted ? 'text-white/60' : 'text-[#0b0d0e]/55'
+        className={`m-0 mt-3 text-[0.88rem] font-light leading-relaxed ${
+          highlighted ? 'text-white/60' : 'text-ink/55'
         }`}
       >
         {description}
@@ -68,10 +68,10 @@ export function PricingCard({
       {/* CTA Button */}
       <button
         type="button"
-        className={`mt-7 w-full inline-flex items-center justify-center h-12 px-6 text-[0.9rem] font-medium rounded-lg cursor-pointer border-none transition-opacity duration-200 hover:opacity-85 ${
+        className={`mt-7 w-full inline-flex items-center justify-center h-12 px-6 text-sm font-medium rounded-lg cursor-pointer border-none transition-opacity duration-200 hover:opacity-85 ${
           highlighted
-            ? 'bg-white text-[#1C3B37]'
-            : 'bg-[#1C3B37] text-white'
+            ? 'bg-white text-brand-green'
+            : 'bg-brand-green text-white'
         }`}
       >
         {buttonText}
@@ -81,7 +81,7 @@ export function PricingCard({
       <div className="mt-8">
         <span
           className={`text-[0.82rem] font-semibold ${
-            highlighted ? 'text-white/80' : 'text-[#0b0d0e]/80'
+            highlighted ? 'text-white/80' : 'text-ink/80'
           }`}
         >
           Includes:
@@ -107,7 +107,7 @@ export function PricingCard({
               </svg>
               <span
                 className={`text-[0.88rem] font-normal leading-[1.5] ${
-                  highlighted ? 'text-white/80' : 'text-[#0b0d0e]/75'
+                  highlighted ? 'text-white/80' : 'text-ink/75'
                 }`}
               >
                 {feature}

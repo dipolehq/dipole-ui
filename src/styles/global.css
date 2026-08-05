@@ -7,6 +7,12 @@
   --color-accent: #e0492f;
   --color-card: #f9f7f5;
 
+  /* Brand palette */
+  --color-brand-green: #1C3B37;
+  --color-brand-green-footer: #004526;
+  --color-off-white: #f9f7f3;
+  --color-surface: #ffffff;
+
   --font-sans: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-brand: 'Tomorrow', var(--font-sans);
   --font-heading: 'Space Grotesk', sans-serif;

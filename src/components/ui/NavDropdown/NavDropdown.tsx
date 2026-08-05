@@ -57,7 +57,7 @@ const THEMES: Record<
   }
 > = {
   dark: {
-    panel: 'bg-[#1C3B37]',
+    panel: 'bg-brand-green',
     divider: 'border-white/10',
     rule: 'border-white/20',
     iconBox: 'border-white/20 text-white/80 group-hover:border-white/45',
@@ -68,13 +68,13 @@ const THEMES: Record<
   },
   light: {
     panel: 'bg-white shadow-[0_24px_60px_rgba(0,0,0,0.35)]',
-    divider: 'border-[#0b0d0e]/10',
-    rule: 'border-[#0b0d0e]/25',
-    iconBox: 'border-[#0b0d0e]/20 text-[#0b0d0e] group-hover:border-[#0b0d0e]/45',
-    title: 'text-[#0b0d0e]',
-    description: 'text-[#0b0d0e]/55',
-    index: 'text-[#0b0d0e]/30',
-    row: 'hover:bg-[#0b0d0e]/[0.035]',
+    divider: 'border-ink/10',
+    rule: 'border-ink/25',
+    iconBox: 'border-ink/20 text-ink group-hover:border-ink/45',
+    title: 'text-ink',
+    description: 'text-ink/55',
+    index: 'text-ink/30',
+    row: 'hover:bg-ink/[0.035]',
   },
 };
 
@@ -169,7 +169,7 @@ export function NavDropdown({
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen((v) => !v)}
-        className={`inline-flex items-center gap-1 px-4 py-2 text-[0.9rem] font-normal tracking-[0.01em] bg-transparent border-none rounded-lg cursor-pointer transition-colors duration-200 ${
+        className={`inline-flex items-center gap-1 px-4 py-2 text-sm font-normal tracking-[0.01em] bg-transparent border-none rounded-lg cursor-pointer transition-colors duration-200 ${
           open ? 'text-white' : 'text-white/50 hover:text-white'
         }`}
       >
@@ -238,12 +238,12 @@ export function NavDropdown({
 
                         <span className="min-w-0 flex-1">
                           <span
-                            className={`block text-[0.9rem] font-semibold leading-[1.35] ${t.title}`}
+                            className={`block text-sm font-semibold leading-snug ${t.title}`}
                           >
                             {item.title}
                           </span>
                           <span
-                            className={`block mt-0.5 text-[0.78rem] font-light leading-[1.55] ${t.description}`}
+                            className={`block mt-0.5 text-[0.78rem] font-light leading-normal ${t.description}`}
                           >
                             {item.description}
                           </span>

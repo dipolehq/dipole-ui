@@ -130,7 +130,7 @@ export function ComparisonSlider({
 
         {/* Divider line */}
         <div
-          className="bg-[#1C3B37] h-full w-[3px] absolute z-20 top-0 -ml-[1.5px] select-none"
+          className="bg-brand-green h-full w-[3px] absolute z-20 top-0 -ml-[1.5px] select-none"
           style={{ left: `${position}%` }}
         >
           {/* Handle — circular with left/right arrows */}
@@ -147,11 +147,11 @@ export function ComparisonSlider({
             onTouchStart={startDrag}
             onMouseUp={stopDrag}
             onTouchEnd={stopDrag}
-            className="w-12 h-12 rounded-full border-[3px] border-[#1C3B37] bg-white select-none -translate-y-1/2 absolute top-1/2 -ml-[22.5px] z-30 cursor-ew-resize flex justify-center items-center shadow-[0_2px_12px_rgba(0,0,0,0.2)] hover:scale-110 transition-all"
+            className="w-12 h-12 rounded-full border-[3px] border-brand-green bg-white select-none -translate-y-1/2 absolute top-1/2 -ml-[22.5px] z-30 cursor-ew-resize flex justify-center items-center shadow-[0_2px_12px_rgba(0,0,0,0.2)] hover:scale-110 transition-all"
           >
             {/* Left/right chevrons */}
             <svg
-              className="h-5 w-5 text-[#1C3B37] select-none"
+              className="h-5 w-5 text-brand-green select-none"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -162,7 +162,7 @@ export function ComparisonSlider({
               <polyline points="15 18 9 12 15 6" />
             </svg>
             <svg
-              className="h-5 w-5 text-[#1C3B37] select-none -ml-1"
+              className="h-5 w-5 text-brand-green select-none -ml-1"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
