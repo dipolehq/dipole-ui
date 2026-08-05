@@ -12,20 +12,24 @@ export interface FooterColumn {
 
 export const FOOTER_COLUMNS: FooterColumn[] = [
   {
-    label: 'Product',
-    links: [
-      { label: 'IAM For Agents', href: '#' },
-      { label: 'IAM For Workloads', href: '#' }
-    ],
-  },
-  {
     label: 'Use Case',
     links: [
       { label: 'Secure Interactive Agents', href: '#' },
-      { label: 'Secure Autonomous Agents', href: '#' },
-      { label: 'Secure MCP Servers', href: '#' },
-      { label: 'Secure CI/CD', href: '#' },
-      { label: 'Secure Non-Human Identities', href: '#' },
+      { label: 'Secure Autonomous Agents', href: '/autonomous-access' },
+      { label: 'Secure MCP Servers', href: '/secure-mcp-access' },
+      { label: 'Secure CI/CD', href: '/secure-ci-cd-access' },
+      { label: 'Secure Non-Human Identities', href: '/secure-nhi-access' },
+      { label: 'Secure Secrets Managers', href: '#' },
+      { label: 'Go Secretless', href: '#' },
+      { label: 'Identity Federation', href: '#' },
+      { label: 'Workload Zero Trust', href: '#' },
+    ],
+  },
+  {
+    label: 'Product',
+    links: [
+      { label: 'IAM For Agents', href: '/iam-for-agents' },
+      { label: 'IAM For Workloads', href: '#' },
     ],
   },
   {

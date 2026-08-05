@@ -196,34 +196,60 @@ export const USE_CASE_COLUMNS: NavDropdownColumn[] = [
     ],
   },
   {
-    label: 'READ',
+    label: 'More',
     items: [
       {
-        title: 'Dipole v/s Your Stack',
+        title: 'Secure Secrets Managers',
         description:
-          'What it replaces, integrates, or works alongside',
+          'Govern how workloads access your vaults and secrets managers with identity-first controls',
         href: '#',
-        // Comparison: a balance scale weighing two sides.
+        // Vault/lock icon.
         icon: icon(
           <>
-            <path d="M12 4v16M8 20h8" />
-            <path d="M5 8h14" />
-            <path d="M5 8l-2.5 5h5L5 8z" />
-            <path d="M19 8l-2.5 5h5L19 8z" />
+            <rect x="3" y="11" width="18" height="11" rx="2" />
+            <path d="M7 11V7a5 5 0 0110 0v4" />
+            <circle cx="12" cy="16" r="1.5" />
           </>,
         ),
       },
       {
-        title: 'Case Studies',
+        title: 'Go Secretless',
         description:
-          'Read the case studies revolving around the purpose and mission of dipole',
+          'Eliminate static credentials entirely with just-in-time, identity-verified access',
         href: '#',
-        // Reading: an open book.
+        // Shield with no-entry sign.
         icon: icon(
           <>
-            <path d="M12 6.5C10.5 5 8.5 4 6 4H4v14h2c2.5 0 4.5 1 6 2.5" />
-            <path d="M12 6.5C13.5 5 15.5 4 18 4h2v14h-2c-2.5 0-4.5 1-6 2.5" />
-            <path d="M12 6.5v14" />
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="M8 12h8" />
+          </>,
+        ),
+      },
+      {
+        title: 'Identity Federation',
+        description:
+          'Federate workload identity across clouds, clusters, and platforms with zero trust',
+        href: '#',
+        // Connected nodes / federation.
+        icon: icon(
+          <>
+            <circle cx="6" cy="6" r="2.5" />
+            <circle cx="18" cy="6" r="2.5" />
+            <circle cx="12" cy="18" r="2.5" />
+            <path d="M8 7.5l4 8.5M16 7.5l-4 8.5M8.5 6h7" />
+          </>,
+        ),
+      },
+      {
+        title: 'Workload Zero Trust',
+        description:
+          'Apply zero-trust principles to every workload connection across your infrastructure',
+        href: '#',
+        // Shield with checkmark.
+        icon: icon(
+          <>
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="M9 12l2 2 4-4" />
           </>,
         ),
       },

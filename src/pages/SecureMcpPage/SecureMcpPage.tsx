@@ -23,7 +23,7 @@ export function SecureMcpPage() {
           <img
             src={PAGE_CONTENT.hero.image}
             alt={PAGE_CONTENT.hero.imageAlt}
-            className="block w-full sm:w-[90%] max-h-full h-auto object-contain"
+            className="block w-full max-h-full h-auto object-contain"
             draggable={false}
           />
         </div>
