@@ -1,7 +1,7 @@
-import managementConsoleImg from '@assets/images/differentiators/management_console.png';
-import mcpAuthdanceImg from '@assets/images/differentiators/mcp_authdance.png';
+import managementConsoleImg from '@assets/images/differentiators/management_console.svg';
+import mcpAuthdanceImg from '@assets/images/differentiators/mcp_authdance.svg';
 import dashboardImg from '@assets/images/differentiators/dashboard.svg';
-import secretlessImg from '@assets/images/differentiators/secretless.png';
+import secretlessImg from '@assets/images/differentiators/secretless.svg';
 
 export const DIFFERENTIATOR_TABS = [
   'Centralized Management Console',
