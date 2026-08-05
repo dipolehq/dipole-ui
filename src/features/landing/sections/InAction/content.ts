@@ -1,23 +1,27 @@
+import mcpAccessDipoleImg from '@assets/images/usecases/mcp/mcp-access-dipole.svg';
+
 export interface InActionItem {
   title: string;
   description: string;
+  image?: string;
 }
 
 /** The three flagship scenarios shown in the "Dipole in Action" section. */
 export const IN_ACTION_ITEMS: InActionItem[] = [
   {
-    title: 'Secure Agentic AI',
+    title: 'Secure Access To MCP Servers',
     description:
-      'Streamline and secure access from AI agents to leading LLMs like OpenAI, Claude, and Gemini, APIs, and tools with policy-based, identity-driven controls.',
+      'AI agents are multiplying across every stack, and with them, a new class of identity and access challenges that traditional security tooling was never designed to handle.',
+    image: mcpAccessDipoleImg,
   },
   {
-    title: 'Secure AI Access to MCP Servers',
+    title: 'Secure Autonomous Agents Access',
     description:
-      'The explosion of Agentic AI is posing new challenges for security and DevOps teams across all industries and organizational sizes.',
+      'Autonomous agents make thousands of decisions without human approval. Dipole makes sure every one of those decisions respects identity, policy, and least-privilege access.',
   },
   {
-    title: 'Federated CI/CD',
+    title: 'Secure CI/CD Access',
     description:
-      'Eliminate hard-coded and long-lived credentials, and build truly resilient software deployment pipelines, with a unified identity system across clouds.',
+      'Eliminate static or hard-coded credentials from your software deployment pipelines.',
   },
 ];
