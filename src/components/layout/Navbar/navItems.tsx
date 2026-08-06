@@ -229,7 +229,7 @@ export const USE_CASE_COLUMNS: NavDropdownColumn[] = [
         title: 'Identity Federation',
         description:
           'Federate workload identity across clouds, clusters, and platforms with zero trust',
-        href: '#',
+        href: '/identity-federation',
         // Connected nodes / federation.
         icon: icon(
           <>

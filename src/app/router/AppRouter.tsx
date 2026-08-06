@@ -11,6 +11,7 @@ import { SecureCiCdPage } from '@pages/SecureCiCdPage';
 import { SecureClaudePage } from '@pages/SecureClaudePage';
 import { SecureMcpPage } from '@pages/SecureMcpPage';
 import { SecureNhiPage } from '@pages/SecureNhiPage';
+import { IdentityFederationPage } from '@pages/IdentityFederationPage';
 
 /**
  * Route tree. Paths come from `ROUTES` so they stay in sync with in-app links.
@@ -30,6 +31,7 @@ export function AppRouter() {
           <Route path={ROUTES.secureAutonomous} element={<SecureAutonomousPage />} />
           <Route path={ROUTES.secureNhi} element={<SecureNhiPage />} />
           <Route path={ROUTES.secureClaude} element={<SecureClaudePage />} />
+          <Route path={ROUTES.identityFederation} element={<IdentityFederationPage />} />
           <Route path={ROUTES.notFound} element={<NotFoundPage />} />
         </Route>
       </Routes>

@@ -21,7 +21,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
       { label: 'Secure Non-Human Identities', href: '/secure-nhi-access' },
       { label: 'Secure Secrets Managers', href: '#' },
       { label: 'Go Secretless', href: '#' },
-      { label: 'Identity Federation', href: '#' },
+      { label: 'Identity Federation', href: '/identity-federation' },
       { label: 'Workload Zero Trust', href: '#' },
     ],
   },

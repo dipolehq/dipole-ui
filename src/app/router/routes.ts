@@ -11,6 +11,7 @@ export const ROUTES = {
   secureAutonomous: '/autonomous-access',
   secureNhi: '/secure-nhi-access',
   secureClaude: '/secure-claude-access',
+  identityFederation: '/identity-federation',
   notFound: '*',
 } as const;
 
