@@ -1,5 +1,5 @@
 import integrationIcon from '@assets/icons/cards/integration.svg';
-import card6Icon from '@assets/icons/cards/card6.svg';
+import addOnIcon from '@assets/icons/cards/addon_icon.svg';
 import secureIcon from '@assets/icons/cards/secure_icon.svg';
 import automaticIcon from '@assets/icons/cards/automatic.svg';
 import autonomousAccessImg from '@assets/images/usecases/autonomous/autonomous-access.svg';
@@ -79,7 +79,7 @@ export const PAGE_CONTENT: UseCasePageContent = {
         title: 'Credential Agnostic',
         description:
           'Support the full spectrum of credential types your autonomous agents demand, from API keys and OAuth tokens to scoped, short-lived federation credentials, all managed through a single policy layer.',
-        icon: card6Icon,
+        icon: addOnIcon,
       },
       {
         title: 'Secretless',
