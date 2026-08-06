@@ -1,0 +1,1 @@
+export { SecureClaudePage } from './SecureClaudePage';

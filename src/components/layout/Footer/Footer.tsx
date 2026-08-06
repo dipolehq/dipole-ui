@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import footerArt from '@assets/images/footer.avif';
 import { Brand } from '@components/ui/Brand';
 
@@ -35,15 +37,30 @@ export function Footer() {
                 <ul className="m-0 p-0 list-none flex flex-col gap-2">
                   {column.links.map((link) => (
                     <li key={link.label}>
-                      <a
-                        href={link.href}
-                        {...(link.external
-                          ? { target: '_blank', rel: 'noreferrer noopener' }
-                          : {})}
-                        className="text-sm font-light text-white/70 no-underline transition-colors duration-200 hover:text-white"
-                      >
-                        {link.label}
-                      </a>
+                      {link.external ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          className="text-sm font-light text-white/70 no-underline transition-colors duration-200 hover:text-white"
+                        >
+                          {link.label}
+                        </a>
+                      ) : link.href.startsWith('/') ? (
+                        <Link
+                          to={link.href}
+                          className="text-sm font-light text-white/70 no-underline transition-colors duration-200 hover:text-white"
+                        >
+                          {link.label}
+                        </Link>
+                      ) : (
+                        <a
+                          href={link.href}
+                          className="text-sm font-light text-white/70 no-underline transition-colors duration-200 hover:text-white"
+                        >
+                          {link.label}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>

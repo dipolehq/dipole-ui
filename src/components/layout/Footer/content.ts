@@ -14,7 +14,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     label: 'Use Case',
     links: [
-      { label: 'Secure Interactive Agents', href: '#' },
+      { label: 'Secure Interactive Agents', href: '/secure-claude-access' },
       { label: 'Secure Autonomous Agents', href: '/autonomous-access' },
       { label: 'Secure MCP Servers', href: '/secure-mcp-access' },
       { label: 'Secure CI/CD', href: '/secure-ci-cd-access' },

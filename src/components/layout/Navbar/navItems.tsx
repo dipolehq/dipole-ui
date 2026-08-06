@@ -119,7 +119,7 @@ export const USE_CASE_COLUMNS: NavDropdownColumn[] = [
         title: 'Secure Interactive Agents',
         description:
           'Secure how your employees interact with internal and external resources via Claude, Cursor, and etc',
-        href: '#',
+        href: '/secure-claude-access',
         // Interactive: chat bubble mid-conversation.
         icon: icon(
           <>

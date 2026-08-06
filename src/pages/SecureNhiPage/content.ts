@@ -1,5 +1,5 @@
-import card5Icon from '@assets/icons/cards/card5.svg';
-import card2Icon from '@assets/icons/cards/card2.svg';
+import policyIcon from '@assets/icons/cards/policy_icon.svg';
+import secureIcon from '@assets/icons/cards/secure_icon.svg';
 import automaticIcon from '@assets/icons/cards/automatic.svg';
 import noCodeIcon from '@assets/icons/cards/no-code.svg';
 import nhiAccessImg from '@assets/images/usecases/nhi/nhi-access.svg';
@@ -70,13 +70,13 @@ export const PAGE_CONTENT: UseCasePageContent = {
         title: 'Policy Driven',
         description:
           'Govern every non-human identity through access policies based on cryptographic identity and real-time conditions. Eliminate the need to manage low-level credentials across services and environments.',
-        icon: card5Icon,
+        icon: policyIcon,
       },
       {
         title: 'Secretless',
         description:
           'Replace static, long-lived credentials with temporary, just-in-time access rights that expire after every interaction. No secret sprawl. No leakage surface. No unauthorized persistence.',
-        icon: card2Icon,
+        icon: secureIcon,
       },
       {
         title: 'Automated',

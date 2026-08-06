@@ -8,6 +8,7 @@ import { NotFoundPage } from '@pages/NotFoundPage';
 import { PricingPage } from '@pages/PricingPage';
 import { SecureAutonomousPage } from '@pages/SecureAutonomousPage';
 import { SecureCiCdPage } from '@pages/SecureCiCdPage';
+import { SecureClaudePage } from '@pages/SecureClaudePage';
 import { SecureMcpPage } from '@pages/SecureMcpPage';
 import { SecureNhiPage } from '@pages/SecureNhiPage';
 
@@ -28,6 +29,7 @@ export function AppRouter() {
           <Route path={ROUTES.secureMcp} element={<SecureMcpPage />} />
           <Route path={ROUTES.secureAutonomous} element={<SecureAutonomousPage />} />
           <Route path={ROUTES.secureNhi} element={<SecureNhiPage />} />
+          <Route path={ROUTES.secureClaude} element={<SecureClaudePage />} />
           <Route path={ROUTES.notFound} element={<NotFoundPage />} />
         </Route>
       </Routes>

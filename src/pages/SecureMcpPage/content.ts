@@ -1,6 +1,6 @@
 import integrationIcon from '@assets/icons/cards/integration.svg';
 import card6Icon from '@assets/icons/cards/card6.svg';
-import card2Icon from '@assets/icons/cards/card2.svg';
+import secureIcon from '@assets/icons/cards/secure_icon.svg';
 import automaticIcon from '@assets/icons/cards/automatic.svg';
 import mcpAccessImg from '@assets/images/usecases/mcp/mcp-access.svg';
 import mcpAccessDipoleImg from '@assets/images/usecases/mcp/mcp-access-dipole.svg';
@@ -85,7 +85,7 @@ export const PAGE_CONTENT: UseCasePageContent = {
         title: 'Secretless',
         description:
           'Replace long-lived secrets with temporary, just-in-time credentials that expire the moment the interaction ends. Nothing stored. Nothing to leak. Nothing to rotate.',
-        icon: card2Icon,
+        icon: secureIcon,
       },
       {
         title: 'Automated',

@@ -1,5 +1,5 @@
-import card1Icon from '@assets/icons/cards/card1.svg';
-import card2Icon from '@assets/icons/cards/card2.svg';
+import fasterIcon from '@assets/icons/cards/faster_icon.svg';
+import secureIcon from '@assets/icons/cards/secure_icon.svg';
 import automaticIcon from '@assets/icons/cards/automatic.svg';
 import noCodeIcon from '@assets/icons/cards/no-code.svg';
 import ciCdPipelineImg from '@assets/images/usecases/cicd/ci-cd-pipeline.svg';
@@ -71,13 +71,13 @@ export const PAGE_CONTENT: UseCasePageContent = {
         title: 'Policy Driven',
         description:
           'Govern pipeline access through identity-aware policies and dynamic conditions. Eliminate the overhead of managing low-level credentials across workflows and environments.',
-        icon: card1Icon,
+        icon: fasterIcon,
       },
       {
         title: 'Secretless',
         description:
           'Move beyond static tokens to short-lived credentials delivered just-in-time, scoped to each run, and revoked the moment the job completes.',
-        icon: card2Icon,
+        icon: secureIcon,
       },
       {
         title: 'Automated',
